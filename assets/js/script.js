@@ -1,6 +1,10 @@
 //const now = 16
 const now = moment().hour()
-let today = moment().format('MMMM Do YYYY');
+const today = moment().format('MMMM Do YYYY');
+
+function getCurrent(today){
+    $("#currentDay").text(today)
+} 
 
 /* var textareas = document.body.getElementsByTagName("textarea")
 function setColors(){
@@ -23,7 +27,7 @@ let hourString = $(this).data("hour")
     hour = parseInt(hourString)
     if (hour > now){
         $(this).addClass("future")}
-    else if (x === hour){
+    else if (hour === now){
         $(this).addClass("present")
     } else{ $(this).addClass("past")}
     }
@@ -44,5 +48,9 @@ let saveId = $(this).find("textarea").attr("id")
 let saveObj = { "id": saveId , "text": saveText}
 save(saveObj)}
 )
-
+$(function(){
+    console.log("hello")
+    setColors()
+    getCurrent(today)
+})
 
