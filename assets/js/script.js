@@ -35,8 +35,17 @@ let hourString = $(this).data("hour")
 }
 
 
-function save(saveobj){
-    localStorage.setItem("toDo", JSON.stringify(saveobj))
+function save(id, text){
+    if (localStorage.getItem("toDo")){
+    currentItems = JSON.parse(localStorage.getItem('toDo'))
+    currentItems[id] = text
+    localStorage.setItem("toDo", JSON.stringify(currentItems))
+    console.log(id, text)
+    } else {
+        let savedItems = {}
+        savedItems[id]=text
+        localStorage.setItem("toDo", JSON.stringify(savedItems))
+    }
 }
 
 
@@ -45,11 +54,14 @@ function save(saveobj){
 $("form").on("click", function(){
 let saveText = $(this).find('textarea[name="task-name"]').val()
 let saveId = $(this).find("textarea").attr("id")
-let saveObj = { "id": saveId , "text": saveText}
-save(saveObj)}
-)
+
+save(saveId,saveText) })
+
+
+
+
 $(function(){
-    console.log("hello")
+    
     setColors()
     getCurrent(today)
 })
