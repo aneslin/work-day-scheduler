@@ -17,3 +17,6 @@ Displays current date at the top of the page.  The standard 9 hour buisness day 
 
 ## Deployed URL
 [Work Day Scheduler](https://aneslin.github.io/work-day-scheduler/)
+
+### Acknowledgments
+Thanks to [Rory McCrossan's](https://stackoverflow.com/users/519413/rory-mccrossan) StackOverflow answer for using jquery to get the value of a form text area when an associated button is clicked
