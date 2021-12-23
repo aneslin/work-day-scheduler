@@ -40,7 +40,6 @@ function save(id, text){
     currentItems = JSON.parse(localStorage.getItem('toDo'))
     currentItems[id] = text
     localStorage.setItem("toDo", JSON.stringify(currentItems))
-    console.log(id, text)
     } else {
         let savedItems = {}
         savedItems[id]=text
@@ -57,7 +56,13 @@ let saveId = $(this).find("textarea").attr("id")
 
 save(saveId,saveText) })
 
-
+if (localStorage.getItem("toDo")){
+    let savedItems = JSON.parse(localStorage.getItem("toDo"))
+    for (const [key, value] of Object.entries(savedItems)){
+        console.log(` retrievien ${key}, ${value}`)
+        $(`#${key}`).val(value)
+    }
+}
 
 
 $(function(){
