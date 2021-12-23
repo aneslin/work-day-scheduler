@@ -18,6 +18,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+
+   
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -28,11 +30,97 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+    <div class="container d-flex flex-column">
+      <row class = "d-flex time-block align-items-start justify-content-around">
+        <h5 class = "hour p-1 col-1 text-left">9 AM</h5>
+        <form class="col-11 d-flex">
+          <textarea name="task-name" id = "task-name" class="form-control"></textarea>
+          <button type="button" class="saveBtn">
+            <i>Save</i>
+          </button>
+        </form>
+      </row>
+      <row class = "d-flex time-block align-items-start justify-content-around">
+        <h5 class = "hour p-1 col-1 text-left">10AM</h5>
+        <form class="col-11 d-flex">
+          <textarea name="task-name" id = "task-name" class="form-control"></textarea>
+          <button type="button" class="saveBtn">
+            <i>Save</i>
+          </button>
+        </form>
+      </row>
+      <row class = "d-flex time-block align-items-start justify-content-around">
+        <h5 class = "hour p-1 col-1 text-left">11AM</h5>
+        <form class="col-11 d-flex">
+          <textarea name="task-name" id = "task-name" class="form-control"></textarea>
+          <button type="button" class="saveBtn">
+            <i>Save</i>
+          </button>
+        </form>
+      </row>
+      <row class = "d-flex time-block align-items-start justify-content-around">
+        <h5 class = "hour p-1 col-1 text-left">12PM</h5>
+        <form class="col-11 d-flex">
+          <textarea name="task-name" id = "task-name" class="form-control"></textarea>
+          <button type="button" class="saveBtn">
+            <i>Save</i>
+          </button>
+        </form>
+      </row>
+      <row class = "d-flex time-block align-items-start justify-content-around">
+        <h5 class = "hour p-1 col-1 text-left">1PM</h5>
+        <form class="col-11 d-flex">
+          <textarea name="task-name" id = "task-name" class="form-control"></textarea>
+          <button type="button" class="saveBtn">
+            <i>Save</i>
+          </button>
+        </form>
+      </row>
+      <row class = "d-flex time-block align-items-start justify-content-around">
+        <h5 class = "hour p-1 col-1 text-left">2PM</h5>
+        <form class="col-11 d-flex">
+          <textarea name="task-name" id = "task-name" class="form-control"></textarea>
+          <button type="button" class="saveBtn">
+            <i>Save</i>
+          </button>
+        </form>
+      </row>
+      <row class = "d-flex time-block align-items-start justify-content-around">
+        <h5 class = "hour p-1 col-1 text-left">3PM</h5>
+        <form class="col-11 d-flex">
+          <textarea name="task-name" id = "task-name" class="form-control"></textarea>
+          <button type="button" class="saveBtn">
+            <i>Save</i>
+          </button>
+        </form>
+      </row>
+      <row class = "d-flex time-block align-items-start justify-content-around">
+        <h5 class = "hour p-1 col-1 text-left">4PM</h5>
+        <form class="col-11 d-flex">
+          <textarea name="task-name" id = "task-name" class="form-control"></textarea>
+          <button type="button" class="saveBtn">
+            <i>Save</i>
+          </button>
+        </form>
+      </row>
+      <row class = "d-flex time-block align-items-start justify-content-around">
+        <h5 class = "hour p-1 col-1 text-left">5PM</h5>
+        <form class="col-11 d-flex">
+          <textarea name="task-name" id = "task-name" class="form-control"></textarea>
+          <button type="button" class="saveBtn">
+            <i>Save</i>
+          </button>
+        </form>
+      </row>
+   
+
+
+      
+    
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src = "./assets/js/script.js"></script>
   </body>
 </html>
