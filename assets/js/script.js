@@ -56,18 +56,20 @@ let saveId = $(this).find("textarea").attr("id")
 
 save(saveId,saveText) })
 
+
+function load(){
 if (localStorage.getItem("toDo")){
     let savedItems = JSON.parse(localStorage.getItem("toDo"))
     for (const [key, value] of Object.entries(savedItems)){
-        console.log(` retrievien ${key}, ${value}`)
         $(`#${key}`).val(value)
     }
-}
+}}
 
 
 $(function(){
     
     setColors()
     getCurrent(today)
+    load()
 })
 
