@@ -19,19 +19,30 @@ for(let i = 0; i < textareas.length; i++){
 
 function setColors(){
 $("textarea").each(function(){
-let x = $(this).data("hour")
-    x = parseInt(x)
-    if (x > now){
+let hourString = $(this).data("hour")
+    hour = parseInt(hourString)
+    if (hour > now){
         $(this).addClass("future")}
-    else if (x === now){
+    else if (x === hour){
         $(this).addClass("present")
     } else{ $(this).addClass("past")}
     }
 )
 }
 
-console.log($("button"))
 
-/* add data element to text 
- * use > < = to apply css */
+function save(saveobj){
+    localStorage.setItem("toDo", JSON.stringify(saveobj))
+}
+
+
+
+//answer provided by https://stackoverflow.com/users/519413/rory-mccrossan
+$("form").on("click", function(){
+let saveText = $(this).find('textarea[name="task-name"]').val()
+let saveId = $(this).find("textarea").attr("id")
+let saveObj = { "id": saveId , "text": saveText}
+save(saveObj)}
+)
+
 
